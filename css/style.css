@@ -1,12 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 body {
-  background: radial-gradient(ellipse at center, rgb(49, 16, 47) 0%, rgb(40, 11, 41) 100%);
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  background-color: #280B29;
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .navigation {
@@ -171,17 +173,17 @@ nav ul li ul li a {
   display: inline-block;
   font-size: 1em;
   padding: 1em 2em;
-  margin-top: 15%;
-  margin-bottom: 60px;
+  margin-top: -1100px;
+  margin-left: -120px;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
   background-color: #ff0043;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
@@ -258,4 +260,96 @@ nav ul li ul li a {
   height: 16rem;
   height: 100vh;
   z-index: 1;
+}
+
+.glowing {
+  position: relative;
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 9s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n+1)::before {
+  background: rgb(255, 0, 0);
+  box-shadow: 0 0 20px rgb(255, 0, 0), 0 0 40px rgb(255, 0, 0), 0 0 60px rgb(255, 0, 0), 0 0 80px rgb(255, 0, 0), 0 0 0 8px rgba(134, 255, 0, 0.1);
+}
+
+.glowing span:nth-child(3n+2)::before {
+  background: rgb(251, 0, 255);
+  box-shadow: 0 0 20px rgb(251, 0, 255), 0 0 40px rgb(255, 0, 132), 0 0 60px rgb(255, 0, 132), 0 0 80px rgb(255, 0, 132), 0 0 0 8px rgba(255, 214, 0, 0.1);
+}
+
+.glowing span:nth-child(3n+3)::before {
+  background: rgb(0, 226, 255);
+  box-shadow: 0 0 20px rgb(0, 226, 255), 0 0 40px rgb(0, 226, 255), 0 0 60px rgb(0, 226, 255), 0 0 80px rgb(0, 226, 255), 0 0 0 8px rgba(0, 226, 255, 0.1);
+}
+
+.glowing span:nth-child(3n+1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n+2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n+3) {
+  animation: animate 8s alternate infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }/*# sourceMappingURL=style.css.map */
