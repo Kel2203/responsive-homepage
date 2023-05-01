@@ -13,7 +13,7 @@ body {
 
 .navigation {
   height: 70px;
-  background: #111111;
+  background: rgba(17, 17, 17, 0);
 }
 
 .nav-container {
@@ -51,7 +51,7 @@ nav ul li a {
   display: block;
   padding: 10px 20px 0 20px;
   line-height: 50px;
-  background: #111111;
+  background: rgba(17, 17, 17, 0);
   color: #faf0f2;
   text-decoration: none;
 }
@@ -91,7 +91,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #111111;
+  background: rgba(17, 17, 17, 0);
   height: 70px;
   width: 70px;
 }
