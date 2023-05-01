@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 $aparence: none;
 $fuschia: #ff0043;
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: #111111;
+$nav-background: #11111100;
 $nav-font-color: #faf0f2;
 $link-hover-color: $fuschia;
 $font: "Poppins", sans-serif;
@@ -30,7 +29,7 @@ $textcolor: rgba(87, 77, 51, 0.66);
 }
 
 body {
-  background-color: #222222;
+  background-color: #202020;
   overflow: hidden;
 }
 
