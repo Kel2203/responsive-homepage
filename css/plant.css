@@ -535,4 +535,17 @@ nav ul li ul li a {
     opacity: 0;
     box-shadow: 0 -15px 0 0px #4f29f0, 14px -8px 0 0px #4f29f0, 14px 8px 0 0px #4f29f0, 0 15px 0 0px #4f29f0, -14px 8px 0 0px #4f29f0, -14px -8px 0 0px #4f29f0;
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7759ff;
+  border-radius: 30px;
 }/*# sourceMappingURL=plant.css.map */
