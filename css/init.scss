@@ -12,6 +12,7 @@ $nav-background: #11111100;
 $nav-font-color: #faf0f2;
 $link-hover-color: $fuschia;
 $font: 'Poppins', sans-serif;
+$font2:  'MuseoModerno', cursive;
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 body{
@@ -19,178 +20,360 @@ body{
     padding:0;
     height: 100vh;
     width: 100vw;
+    border:none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
     background:$bgcolor;
-    font-family: $font;
+    font-family: $font2;
 }
 
-.navi {
-    height: $nav-height;
-    background: $nav-background;
+.logo{
+  font-size: 2.5rem;
+ font-weight: 700;
+  color:#fff
+}
+.navbar{
+  display: flex;
+  align-items: center;
+}
+.navbar a{
+ position: relative;
+ color: #fff;
+ font-size: 17px;
+ font-weight: 500;
+ margin-left: 45px;
+
+}
+.navbar a::after{
+  position: absolute;
+  content: '';
+  right: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 8px;
+  transition: all ease .45s;
+}
+.navbar a:hover::after{
+  width: 100%;
+} 
+.main{
+  position: relative;
+  height: 530px;
+  width: 460px;
+  background: transparent;
+  border-radius: 24px;
+  border: 3px solid rgba(257, 257, 257, 0.5);
+  backdrop-filter: blur(25px);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+transition: all ease .35s;
+}
+.main-box{
+  padding: 50px;
+  width: 100%;
+}
+.main-box h1{
+  color: #162938;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+}
+.input-box{
+  position: relative;
+  height: 52px;
+  width: 100%;
+  border-bottom: 2px solid #162938;
+  margin: 32px 0;
+}
+
+.input-box label{
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #162938;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all ease .45s;
+}
+.input-box input{
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  color: #162938;
+  padding: 0 30px 0 6px;
+}
+.input-box .icon{
+  position: absolute;
+  right: 9px;
+  font-size: 19px;
+  color: #162938;
+  line-height: 55px;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+  top: -3px ;
+}
+.check{
+  font-size: 15px;
+  font-weight: 500;
+  coLor:#162938;
+  margin: -14px 0 15px;
+  display: fLex;
+  justify-content: space-between;
+}
+  .check label input{
+    margin-right: 5px;
+    accent-color: #162938;
   }
-  
-  .nav-container {
-    max-width: $content-width;
-    margin: 0 auto;
+  .check a:hover{
+    text-decoration: underLine;
   }
+.main-btn{
+    background: #162938;
+    width: 100%;
+    height: 43px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    }
   
-  .brand {
+label{
+.btnLogin-popup{
+  display: inline-block;
+  padding: 8px 30px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+font-size: 17px;
+font-weight: 400;
+margin-left: 45px;
+cursor: pointer;
+transition: all ease .45s
+}
+.register{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #162938;
+  margin: 30px 0 10px
+}
+.register p a{
+  font-weight: 600;
+  color: #162938;
+}
+  .register p a:hover{
+  text-decoration: underline;
+  }
+
+.close-icon{
     position: absolute;
-    padding-left: 20px;
-    float: left;
-    line-height: $nav-height;
-    text-transform: uppercase;
-    font-size: 1.4em;
+    Left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: #162938;
+    coLor: #fff ;
+    display: inline-flex;
+    aLign-items: center;
+    justify-content: center;
+    font-size: 32px;
+    z-index: 1;
+    border-bottom-right-radius:15px;
+    cursor: pointer;
+  }
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  padding: 30px 30%;
+  display:flex; 
+  text-align: center;
+  justify-content: space-between;
+}
+// .navi {
+//     height: $nav-height;
+//     background: $nav-background;
+//   }
+  
+//   .nav-container {
+//     max-width: $content-width;
+//     margin: 0 auto;
+//   }
+  
+//   .brand {
+//     position: absolute;
+//     padding-left: 20px;
+//     float: left;
+//     line-height: $nav-height;
+//     text-transform: uppercase;
+//     font-size: 1.4em;
    
   
-    a,
-    a:visited {
-      color: $nav-font-color;
-      text-decoration: none;
-    }
-  }
+//     a,
+//     a:visited {
+//       color: $nav-font-color;
+//       text-decoration: none;
+//     }
+//   }
   
-  nav {
-    float: right;
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      li {
-        float: left;
-        position: relative;
-        a {
-          display: block;
-          padding: 10px 20px 0 20px;
-          line-height: 50px;
-          background: $nav-background;
-          color: $nav-font-color;
-          text-decoration: none;
+//   nav {
+//     float: right;
+//     ul {
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//       li {
+//         float: left;
+//         position: relative;
+//         a {
+//           display: block;
+//           padding: 10px 20px 0 20px;
+//           line-height: 50px;
+//           background: $nav-background;
+//           color: $nav-font-color;
+//           text-decoration: none;
           
           
-           &::before {
-             transition: 300ms;
-             height: 5px;
-             content: "";
-             position: absolute;
-             background-color: $link-hover-color;
-             width: 0%;
-             bottom: 0px;
-          }
+//            &::before {
+//              transition: 300ms;
+//              height: 5px;
+//              content: "";
+//              position: absolute;
+//              background-color: $link-hover-color;
+//              width: 0%;
+//              bottom: 0px;
+//           }
   
-          &:hover::before{
-            width: 70%;
-          }
-          &:not(:only-child):after {
-            padding-left: 4px;
-            content: ' ▾';
-          }
-        } // Dropdown list
-        ul li {
-          min-width: 190px;
-          a {
-            padding: 15px;
-            line-height: 20px;
-          }
-        }
-      }
-    }
-  }
+//           &:hover::before{
+//             width: 70%;
+//           }
+//           &:not(:only-child):after {
+//             padding-left: 4px;
+//             content: ' ▾';
+//           }
+//         } // Dropdown list
+//         ul li {
+//           min-width: 190px;
+//           a {
+//             padding: 15px;
+//             line-height: 20px;
+//           }
+//         }
+//       }
+//     }
+//   }
   
   
-  .nav-dropdown {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  }
+//   .nav-dropdown {
+//     display: none;
+//     position: absolute;
+//     z-index: 1;
+//     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+//   }
   
-  .nav-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $nav-background;
-    height: $nav-height;
-    width: $nav-height;
-  }
+//   .nav-mobile {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     background: $nav-background;
+//     height: $nav-height;
+//     width: $nav-height;
+//   }
   
-  @media only screen and (max-width: $breakpoint) {
-    .nav-mobile {
-      display: block;
-    }
-    nav {
-        width: 100%;
-        padding: $nav-height 0 15px;
-      ul {
-        display: none;
+//   @media only screen and (max-width: $breakpoint) {
+//     .nav-mobile {
+//       display: block;
+//     }
+//     nav {
+//         width: 100%;
+//         padding: $nav-height 0 15px;
+//       ul {
+//         display: none;
         
-        li{
-          float: none;
+//         li{
+//           float: none;
           
-          a {
-            padding: 15px;
-            line-height: 20px;
+//           a {
+//             padding: 15px;
+//             line-height: 20px;
             
-            &:hover::before{
-              width: 20%;
-            }
-          }
-          ul li a {
-            padding-left: 30px;
-          }
-        }
-      }
-    }
-    .nav-dropdown {
-      position: static;
-    }
-  }
+//             &:hover::before{
+//               width: 20%;
+//             }
+//           }
+//           ul li a {
+//             padding-left: 30px;
+//           }
+//         }
+//       }
+//     }
+//     .nav-dropdown {
+//       position: static;
+//     }
+//   }
   
-  #nav-toggle {
-    position: absolute;
-    left: 18px;
-    top: 22px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
-    span,
-    span:before,
-    span:after {
-      cursor: pointer;
-      border-radius: 1px;
-      height: 5px;
-      width: 35px;
-      background: $link-hover-color;
-      position: absolute;
-      display: block;
-      content: '';
-      transition: all 300ms ease-in-out;
-    }
-    span:before {
-      top: -10px;
-    }
-    span:after {
-      bottom: -10px;
-    }
-    &.active span {
-      background-color: transparent;
-      &:before,
-      &:after {
-        top: 0;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
+//   #nav-toggle {
+//     position: absolute;
+//     left: 18px;
+//     top: 22px;
+//     cursor: pointer;
+//     padding: 10px 35px 16px 0px;
+//     span,
+//     span:before,
+//     span:after {
+//       cursor: pointer;
+//       border-radius: 1px;
+//       height: 5px;
+//       width: 35px;
+//       background: $link-hover-color;
+//       position: absolute;
+//       display: block;
+//       content: '';
+//       transition: all 300ms ease-in-out;
+//     }
+//     span:before {
+//       top: -10px;
+//     }
+//     span:after {
+//       bottom: -10px;
+//     }
+//     &.active span {
+//       background-color: transparent;
+//       &:before,
+//       &:after {
+//         top: 0;
+//       }
+//       &:before {
+//         transform: rotate(45deg);
+//       }
+//       &:after {
+//         transform: rotate(-45deg);
+//       }
+//     }
+//   }
   
-  @media screen and (min-width: $breakpoint) {
-    .nav-list {
-      display: block !important;
-    }
-  }
+//   @media screen and (min-width: $breakpoint) {
+//     .nav-list {
+//       display: block !important;
+//     }
+//   }
   
 
 
