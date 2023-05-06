@@ -5,10 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/init.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=MuseoModerno:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
-    <section class="navi">
+  <header>
+
+  <a href="/index.html" class="logo">🍒 Cherry</a>
+  <ul class="navbar">
+    <li><a href="/init.html">Home</a></li>
+    <li><a href="/plant.html">Loja</a></li>
+    <li><a href="#!">Web Design</a></li>
+    <li><a href="#!">Web Development</a></li>
+    <li><a href="#!">Design Gráfico</a></li>
+    <li><a href="#!">Sobre nós</a></li>
+    <li><a href="#!">Contato</a></li>
+    <li>
+   
+   
+    <button type="button" class="btnLogin-popup">Login</button>
+  </ul>
+  </header>
+
+  <div class="body1">
+    <div class="main">
+    <div class="main-box login">
+      <h1>
+        Login
+      </h1>
+      <form action="">
+        <div class="input-box">
+          <span class="icon"><i class='bx bxs-envelope' ></i></span>
+          <input type="email" id="email"required placeholder="Digite seu email">
+          <label for="email">Email</label>
+        </div>
+      </form>
+      <form action="">
+        <div class="input-box">
+          <span class="icon"><i class='bx bx-lock-alt' ></i></span>
+          <input type="password" id="password" required >
+          <label for="password">Password</label>
+        </div>
+
+        <div class="check">
+          <label for="check">
+            <input type="checkbox" id="check">Remember me</label>
+           <a href="#">Forget Password</a>
+          
+        </div>
+        <button type="submit" class="main-btn">Login</button>
+
+        <div class="register">
+          <p>
+            if you don't have an account?
+            <a href="#" class="register-link">Register Here!</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <span class="close-icon">
+
+        <div class='bx bx-x'></div>
+      </div>
+    </span>
+    </div>
+  </div>
+    <!-- <section class="navi">
         <div class="nav-container">
           <div class="brand">
             <a href="/index.html">🍒 Cherry</a>
@@ -33,7 +100,7 @@
         </ul>
       </nav>
           </div>
-      </section>
+      </section> -->
     <div class="content">
         <div class="slides">
             <input type="radio" name="radio" id="slide1">
@@ -72,6 +139,8 @@
 
             </div>
         </div>
-   
+
+
+   <script src="/js/init.js"></script>
 </body>
 </html>
