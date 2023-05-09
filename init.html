@@ -11,12 +11,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=MuseoModerno:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Home</title>
+
+   
 </head>
 <body>
+  <!-- header desing -->
   <header>
 
-  <a href="/index.html" class="logo">🍒 Cherry</a>
+ 
+    <a href="/index.html" class="logo">🍒 Cherry</a>
   <ul class="navbar">
+   
     <li><a href="/init.html">Home</a></li>
     <li><a href="/plant.html">Loja</a></li>
     <li><a href="#!">Web Design</a></li>
@@ -24,15 +29,16 @@
     <li><a href="#!">Design Gráfico</a></li>
     <li><a href="#!">Sobre nós</a></li>
     <li><a href="#!">Contato</a></li>
-    <li>
-   
-   
+    <li>  
     <button type="button" class="btnLogin-popup">Login</button>
   </ul>
+
   </header>
 
-  <div class="body1">
-    <div class="main">
+
+  <!-- container -->
+
+  <div class="container">
     <div class="main-box login">
       <h1>
         Login
@@ -40,20 +46,21 @@
       <form action="">
         <div class="input-box">
           <span class="icon"><i class='bx bxs-envelope' ></i></span>
-          <input type="email" id="email"required placeholder="Digite seu email">
-          <label for="email">Email</label>
+          <input type="email" required>
+          <label>Email</label>
         </div>
-      </form>
-      <form action="">
+     
         <div class="input-box">
           <span class="icon"><i class='bx bx-lock-alt' ></i></span>
-          <input type="password" id="password" required >
-          <label for="password">Password</label>
+          <input type="password" required >
+          <label >Password</label>
         </div>
 
         <div class="check">
-          <label for="check">
-            <input type="checkbox" id="check">Remember me</label>
+          <label>
+            <input type="checkbox">
+            Remember me
+          </label>
            <a href="#">Forget Password</a>
           
         </div>
@@ -67,6 +74,48 @@
         </div>
       </form>
     </div>
+
+    <!-- register -->
+    <div class="main-box register">
+      <h1>
+       Registration
+      </h1>
+      <form action="">
+        <div class="input-box">
+          <span class="icon"><i class='bx bx-user-circle'></i></span>
+          <input type="text" id="user"required >
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxs-envelope' ></i></span>
+          <input type="email" id="email"required >
+          <label for="email">Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bx-lock-alt' ></i></span>
+          <input type="password" id="password" required >
+          <label for="password">Password</label>
+        </div>
+
+        <div class="check">
+          <label>
+            <input type="checkbox">
+           I accept all terms & condictions
+          </label>
+  
+          
+        </div>
+        <button type="submit" class="main-btn">Register Now</button>
+
+        <div class="register">
+          <p>
+            Already have an account?
+            <a href="#" class="login-link">Login!</a>
+          </p>
+        </div>
+      </form>
+    </div>
+   
 
     <span class="close-icon">
 
@@ -101,46 +150,55 @@
       </nav>
           </div>
       </section> -->
+      <div class="section">
     <div class="content">
         <div class="slides">
-            <input type="radio" name="radio" id="slide1">
-            <input type="radio" name="radio" id="slide2">
-            <input type="radio" name="radio" id="slide3">
-            <input type="radio" name="radio" id="slide4">
-            <input type="radio" name="radio" id="slide5">
+            <input type="radio" name="radio-btn" id="slide1">
+            <input type="radio" name="radio-btn" id="slide2">
+            <input type="radio" name="radio-btn" id="slide3">
+            <input type="radio" name="radio-btn" id="slide4">
+            <input type="radio" name="radio-btn" id="slide5">
 
-            <div class="slide s1">
+            <div class="st first">
                 <img src="/image/img1.jpeg" alt="img1">
                 </div>
 
-            <div class="slide">
+            <div class="st">
                 <img src="/image/img2.jpeg" alt="img2">
                 </div>
             
-            <div class="slide">
+            <div class="st">
                 <img src="/image/img3.jpeg" alt="img3">
                 </div>
 
-            <div class="slide">
+            <div class="st">
                 <img src="/image/img4.jpeg" alt="img4">
                 </div>
             
-            <div class="slide">
+            <div class="st">
                 <img src="/image/img5.jpeg" alt="img5">
                 </div>
             </div>
 
             <div class="navegation">
-                <label class="bar" for="slide1"></label>
-                <label class="bar" for="slide2"></label>
-                <label class="bar" for="slide3"></label>
-                <label class="bar" for="slide4"></label>
-                <label class="bar" for="slide5"></label>
+                <div class="bar" ></div>
+                <div class="bar2" ></div>
+                <div class="bar3" ></div>
+                <div class="bar4" ></div>
+                <div class="bar5" ></div>
 
             </div>
+            <div class="nav-m">
+              <label class="m-btn" for="slide1"></label>
+              <label class="m-btn" for="slide2"></label>
+              <label class="m-btn" for="slide3"></label>
+              <label class="m-btn" for="slide4"></label>
+              <label class="m-btn" for="slide5"></label>
+
+          </div>
         </div>
+      </div>
 
-
-   <script src="/js/init.js"></script>
+        <script src="/init.js"></script>
 </body>
 </html>
